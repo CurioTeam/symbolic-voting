@@ -80,3 +80,7 @@ The deployed contract address will be displayed in the command output.
 ```shell script
 dapp clean
 ```
+
+## Deployed contracts
+
+The deployed contract data is contained in the ```deployed``` directory.
