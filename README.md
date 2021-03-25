@@ -25,6 +25,8 @@ You must have a Unix-like operating system. To compile, test and deploy smart co
 Install [Nix](https://nixos.org/) if you haven't already:
 
 ```shell script
+# run into '/' directory
+
 # user must be in sudoers
 curl -L https://nixos.org/nix/install | sh
 
@@ -32,7 +34,7 @@ curl -L https://nixos.org/nix/install | sh
 . "$HOME/.nix-profile/etc/profile.d/nix.sh"
 ```
 
-Then install [dapptools](https://github.com/dapphub/dapptools):
+Then install [dapptools](https://github.com/dapphub/dapptools) into project root directory:
 
 ```shell script
 curl https://dapp.tools/install | sh
@@ -68,6 +70,7 @@ ETH_FROM={deployer_address} \
 ETH_PASSWORD=./keystore/pwd \
 ETH_KEYSTORE=./keystore \
 ETH_GAS=800000 \
+ETH_GAS_PRICE={gas_price_wei} \
 ETH_RPC_URL=https://{eth_net}.infura.io/v3/{infura_project_id} \
 TMPDIR=/tmp \
 dapp create PollingEmitter
